@@ -11,4 +11,6 @@ public interface ReservationRepository extends JpaRepository<Reservation, Long> 
     Integer countAllByDateAndTime(LocalDate date, Integer time);
 
     Optional<Reservation> findBySpaceAndDateAndTime(Integer space, LocalDate date, Integer time);
+
+    Optional<Reservation> findBySpaceAndDateAndTimeAndCarPlate(Integer space, LocalDate date, Integer time, String carPlate);
 }
